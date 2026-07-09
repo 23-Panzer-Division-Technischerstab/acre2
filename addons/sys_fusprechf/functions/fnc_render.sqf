@@ -42,6 +42,7 @@ RADIO_CTRL(106) ctrlSetText format ["\idi\acre\addons\sys_fusprechf\Data\knobs\c
 RADIO_CTRL(107) ctrlSetText format ["\idi\acre\addons\sys_fusprechf\Data\knobs\volume\bf888s_ui_vol_%1.paa", _currentVolumeKnobState];
 RADIO_CTRL(201) ctrlSetTooltip format ["%1: %2",LELSTRING(sys_radio,ui_CurrentChannel), _currentChannel + 1];
 RADIO_CTRL(202) ctrlSetTooltip format ["%1: %2%3", LELSTRING(sys_radio,ui_CurrentVolume),round (_currentVolume * 100), "%"];
+RADIO_CTRL(203) ctrlSetTooltip format ["%1: %2%3", LELSTRING(sys_radio,ui_CurrentVolume),round (_currentVolume * 100), "%"];
 RADIO_CTRL(99999) ctrlSetText QPATHTOF(Data\static\bf888s_ui_backplate.paa);
 
 {_x ctrlEnable true;} forEach [RADIO_CTRL(201),RADIO_CTRL(202)];

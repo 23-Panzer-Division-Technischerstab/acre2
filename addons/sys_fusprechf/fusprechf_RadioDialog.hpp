@@ -25,33 +25,27 @@ class FUSPRECHF_RadioDialog {
         colorText[] = {1, 1, 1, 1};
         font = FontM;
         sizeEx = 0.04;
-        /*x = SafeZoneY;
-        y = ((0.5-((0.8*SafeZoneH)/2)));
-        w = 1*SafeZoneH;
-        h = 0.8*SafeZoneH;*/
+        x = "safezoneX";
+        y = QUOTE((0.5-((1*safezoneW)/2)));
+        w = QUOTE(1*safezoneW);
+        h = QUOTE(1*safezoneW);
 
-        x = QUOTE(((0.5-(NEW_SCALE*(safeZoneH)/2))));
-        y = QUOTE(((0.5-(NEW_SCALE*(safeZoneH)/2))));
-        w = QUOTE(NEW_SCALE*safeZoneH);
-        h = QUOTE(NEW_SCALE*safeZoneH);
-
-        text = QPATHTOF(Data\static\bf888s_ui_backplate.paa);
+        text = QPATHTOF(Data\static\fusprech_f_base.paa);
     };
     class controls {
         BEGIN_CONTROL(ChannelKnob,FUSPRECHF_RscPicture,106)
-            x = QUOTE(((0.5-(NEW_SCALE*(safeZoneH)/2))));
-            y = QUOTE(((0.5-(NEW_SCALE*(safeZoneH)/2))));
-            w = QUOTE(NEW_SCALE*safeZoneH);
-            h = QUOTE(NEW_SCALE*safeZoneH);
-            text = QPATHTOF(Data\knobs\channel\bf888s_ui_pre_1.paa);
+            x = "safezoneX";
+            y = QUOTE((0.5-((1*safezoneW)/2)));
+            w = QUOTE(1*safezoneW);
+            h = QUOTE(1*safezoneW);
+            text = QPATHTOF(Data\knobs\channel\fusprech_f_frequency_341.paa);
         END_CONTROL
 
-        // x 1048, y 927
         BEGIN_CONTROL(ChannelKnobButton,FUSPRECHF_RscButton,201)
-            x = QUOTE((((((0.410+0.085)-0.5)*SCALE)+0.5) * SafeZoneH) + SafeZoneY);
-            y = QUOTE(((((0.38-0.5)*SCALE)+0.5) * SafeZoneH) + SafeZoneY);
-            w = QUOTE(SCALE*0.04*SafeZoneH);
-            h = QUOTE(SCALE*0.1*SafeZoneH);
+            x = QUOTE(safeZoneX + safeZoneW * 0.46484375);
+            y = QUOTE(safeZoneY + safeZoneH * 0.44444445);
+            w = QUOTE(safeZoneW * 0.0703125);
+            h = QUOTE(0.1*SafeZoneW);
             colorBackground[] = {1, 0, 0, 0};
             text = "";
             onMouseButtonUp = "[_this,0] call acre_sys_fusprechf_fnc_onChannelKnobPress";
@@ -59,22 +53,51 @@ class FUSPRECHF_RadioDialog {
         END_CONTROL
 
         BEGIN_CONTROL(VolumeKnob,FUSPRECHF_RscPicture,107)
-            x = QUOTE(((0.5-(NEW_SCALE*(safeZoneH)/2))));
-            y = QUOTE(((0.5-(NEW_SCALE*(safeZoneH)/2))));
-            w = QUOTE(NEW_SCALE*safeZoneH);
-            h = QUOTE(NEW_SCALE*safeZoneH);
-            text = QPATHTOF(Data\knobs\volume\bf888s_ui_vol_5.paa);
+            x = "safezoneX";
+            y = QUOTE((0.5-((1*safezoneW)/2)));
+            w = QUOTE(1*safezoneW);
+            h = QUOTE(1*safezoneW);
+            text = QPATHTOF(Data\knobs\volume\fusprech_f_volume_5.paa);
         END_CONTROL
 
-        // x 1186, y 922
         BEGIN_CONTROL(VolumeKnobButton,FUSPRECHF_RscButton,202)
-            x = QUOTE((((((0.450+0.085)-0.5)*SCALE)+0.5) * SafeZoneH) + SafeZoneY);
-            y = QUOTE(((((0.38-0.5)*SCALE)+0.5) * SafeZoneH) + SafeZoneY);
-            w = QUOTE(SCALE*0.04*SafeZoneH);
-            h = QUOTE(SCALE*0.1*SafeZoneH);
+            x = QUOTE(safeZoneX + safeZoneW * 0.70410157);
+            y = QUOTE(safeZoneY + safeZoneH * 0.68055556);
+            w = QUOTE(safeZoneW * 0.09960938);
+            h = QUOTE(0.1*SafeZoneW);
             colorBackground[] = {0, 1, 0, 0};
             text = "";
             onMouseButtonUp = QUOTE(_this call FUNC(onVolumeKnobPress));
+            toolTip = ECSTRING(sys_radio,ui_ChangeVolume);
+        END_CONTROL
+
+        BEGIN_CONTROL(Speaker,FUSPRECHF_RscPicture,108)
+            x = "safezoneX";
+            y = QUOTE((0.5-((1*safezoneW)/2)));
+            w = QUOTE(1*safezoneW);
+            h = QUOTE(1*safezoneW);
+            text = QPATHTOF(Data\knobs\speaker\fusprech_f_speaker_off.paa);
+        END_CONTROL
+
+        BEGIN_CONTROL(SpeakerButton,FUSPRECHF_RscButton,203)
+            x = QUOTE(safeZoneX + safeZoneW * 0.22070313);
+            y = QUOTE(safeZoneY + safeZoneH * 0.32291667);
+            w = QUOTE(safeZoneW * 0.09472657);
+            h = QUOTE(0.1*SafeZoneW);
+            colorBackground[] = {0, 1, 0, 0};
+            text = "";
+            onMouseButtonUp = QUOTE(_this call FUNC(onSpeakerPress));
+            toolTip = ECSTRING(sys_radio,ui_ChangeVolume);
+        END_CONTROL
+
+        BEGIN_CONTROL(CallButton,FUSPRECHF_RscButton,204)
+            x = QUOTE(safeZoneX + safeZoneW * 0.7578125);
+            y = QUOTE(safeZoneY + safeZoneH * 0.46875);
+            w = QUOTE(safeZoneW * 0.04589844);
+            h = QUOTE(0.1*SafeZoneW);
+            colorBackground[] = {0, 1, 0, 0};
+            text = "";
+            onMouseButtonUp = QUOTE(_this call FUNC(onCallPress));
             toolTip = ECSTRING(sys_radio,ui_ChangeVolume);
         END_CONTROL
     };
