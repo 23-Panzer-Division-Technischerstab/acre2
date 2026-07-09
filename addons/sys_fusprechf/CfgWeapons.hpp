@@ -5,8 +5,8 @@ class CfgWeapons {
     class ACRE_FUSPRECHF: ACRE_BaseRadio {
         displayName = QUOTE(NAME_FUSPRECHF);
         useActionTitle = QUOTE(NAME_FUSPRECHF);
-        picture = QPATHTOF(Data\static\bf888s_icon.paa);
-        model = QPATHTOF(Data\models\acre_bf888s_model.p3d);
+        picture = QPATHTOF(Data\static\fusprech_f_icon.paa);
+        model = QPATHTOF(Data\models\acre_fusprechf_model.p3d);
         descriptionShort = "Fusprech.f HF Radio";
 
         scopeCurator = 2;
