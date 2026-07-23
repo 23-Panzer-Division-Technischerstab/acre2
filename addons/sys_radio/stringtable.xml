@@ -260,6 +260,12 @@
             <Chinesesimp>当前音量</Chinesesimp>
             <Spanish>Volumen Actual</Spanish>
         </Key>
+        <Key ID="STR_ACRE_sys_radio_ui_ToggleSpeaker">
+            <English>Toggle External Speaker</English>
+        </Key>
+        <Key ID="STR_ACRE_sys_radio_ui_CallBuzzer">
+            <English>Call Buzzer</English>
+        </Key>
         <Key ID="STR_ACRE_sys_radio_ui_Radiooff">
             <English>Radio off</English>
             <Czech>Rádio je vypnuté</Czech>

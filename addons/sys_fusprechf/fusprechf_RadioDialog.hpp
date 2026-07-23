@@ -87,7 +87,7 @@ class FUSPRECHF_RadioDialog {
             colorBackground[] = {0, 1, 0, 0};
             text = "";
             onMouseButtonUp = QUOTE(_this call FUNC(onSpeakerPress));
-            toolTip = ECSTRING(sys_radio,ui_ChangeVolume);
+            toolTip = ECSTRING(sys_radio,ui_ToggleSpeaker);
         END_CONTROL
 
         BEGIN_CONTROL(CallButton,FUSPRECHF_RscButton,204)
@@ -98,7 +98,7 @@ class FUSPRECHF_RadioDialog {
             colorBackground[] = {0, 1, 0, 0};
             text = "";
             onMouseButtonUp = QUOTE(_this call FUNC(onCallPress));
-            toolTip = ECSTRING(sys_radio,ui_ChangeVolume);
+            toolTip = ECSTRING(sys_radio,ui_CallBuzzer);
         END_CONTROL
     };
 };
