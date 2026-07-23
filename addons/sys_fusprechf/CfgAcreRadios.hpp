@@ -19,7 +19,7 @@ class CfgAcreComponents {
             {"Audio/Data", ACRE_CONNECTOR_U_283}
         };
         defaultComponents[] = {
-            {0, "ACRE_22CM_UHF_SMA"},
+            {0, "ACRE_WW2_2M_VH"},
         };
 
         class InterfaceClasses {

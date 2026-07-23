@@ -21,8 +21,8 @@ class CfgWeapons {
             libTextDesc = QUOTE(NAME_FUSPRECHF);
         };
 
-        EGVAR(arsenalStats,frequencyMin) = 19998e3;
-        EGVAR(arsenalStats,frequencyMax) = 21473e3;
+        EGVAR(arsenalStats,frequencyMin) = 28000e3;
+        EGVAR(arsenalStats,frequencyMax) = 33900e3;
         EGVAR(arsenalStats,transmitPower) = 8000;
         EGVAR(arsenalStats,effectiveRange) = "3-5km (2-3km)";
         EGVAR(arsenalStats,externalSpeaker) = 1;
