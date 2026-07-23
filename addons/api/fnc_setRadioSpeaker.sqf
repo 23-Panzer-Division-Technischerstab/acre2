@@ -29,7 +29,7 @@ if (_radioType in ["ACRE_PRC148", "ACRE_PRC152"]) exitWith {
     [_radioId, "setState", ["audioPath", _audioSpeaker]] call EFUNC(sys_data,dataEvent)
 };
 
-if (_radioType in ["ACRE_SEM70", "ACRE_SEM52SL"]) exitWith {
+if (_radioType in ["ACRE_SEM70", "ACRE_SEM52SL", "ACRE_FUSPRECHF"]) exitWith {
     private _audioSpeaker = ["HEADSET", "INTSPEAKER"] select _speaker;
     [_radioId, "setState", ["audioPath", _audioSpeaker]] call EFUNC(sys_data,dataEvent)
 };

@@ -25,7 +25,7 @@ private _audioSource = [_radioId] call FUNC(getRadioAudioSource);
 if (_radioType in ["ACRE_PRC148", "ACRE_PRC152"] && {_audioSource == "INTAUDIO"}) exitWith {
     true
 };
-if (_radioType in ["ACRE_SEM70", "ACRE_SEM52SL"] && {_audioSource == "INTSPEAKER"}) exitWith {
+if (_radioType in ["ACRE_SEM70", "ACRE_SEM52SL", "ACRE_FUSPRECHF"] && {_audioSource == "INTSPEAKER"}) exitWith {
     true
 };
 
