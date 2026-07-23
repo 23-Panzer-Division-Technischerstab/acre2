@@ -20,9 +20,9 @@ class CfgAcreComponents {
     class ACRE_WW2_2M_VH : ACRE_BaseAntenna {
         name = "2 Meter Whip Antenna";
         shortName = "2M Whip";
-        connector = ACRE_CONNECTOR_TNC;
+        connector = ACRE_CONNECTOR_SMA;
         height = 2;
         binaryGainFile = QPATHTOF(binary\2mFusprechf_gain.aba);
-        compatibleRadios[] = {"WW2_FUSPRECHF"};
+        compatibleRadios[] = {"ACRE_FUSPRECHF"};
     };
 };
