@@ -17,8 +17,8 @@
 
 private _presetFrequencies = [];
 for "_i" from 0 to 59 do {
-    private _basefrequency = 28.0;
-    private _frequencymodifier = _i * 0.1;
+    private _basefrequency = 19.9975;
+    private _frequencymodifier = _i * 0.025;
     private _frequency = _basefrequency + _frequencymodifier;
     PUSH(_presetFrequencies,_frequency);
 };
