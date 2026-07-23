@@ -32,7 +32,7 @@ private _currentChannel =  [GVAR(currentRadioId)] call FUNC(getCurrentChannelInt
 private _newChannel = _currentChannel;
 
 if (_knob == 0) then {
-    _newChannel = ((_currentChannel + _currentDirection) max 0) min 15;
+    _newChannel = ((_currentChannel + _currentDirection) max 0) min 59;
 };
 
 TRACE_2("Channel",_newChannel,_currentChannel);
