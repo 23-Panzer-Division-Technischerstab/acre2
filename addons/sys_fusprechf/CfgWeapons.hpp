@@ -6,7 +6,7 @@ class CfgWeapons {
         displayName = QUOTE(NAME_FUSPRECHF);
         useActionTitle = QUOTE(NAME_FUSPRECHF);
         picture = QPATHTOF(Data\static\fusprech_f_icon.paa);
-        model = QPATHTOF(Data\models\acre_fusprechf_model.p3d);
+        model = QPATHTOF(Data\Models\acre_fusprechf_model.p3d);
         descriptionShort = "Fusprech.f HF Radio";
 
         scopeCurator = 2;
@@ -18,7 +18,7 @@ class CfgWeapons {
         };
 
         class Library {
-            libTextDesc = QUOTE(NAME_BF888S);
+            libTextDesc = QUOTE(NAME_FUSPRECHF);
         };
 
         EGVAR(arsenalStats,frequencyMin) = 19998e3;
