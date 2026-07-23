@@ -40,6 +40,5 @@ if (_newChannel != _currentChannel) then {
     ["setCurrentChannel", _newChannel] call GUI_DATA_EVENT;
 
     ["Acre_GenericClick", [0,0,0], [0,0,0], 1, false] call EFUNC(sys_sounds,playSound);
-    [format ["Acre_Fusprechf_%1",_newChannel + 1], [0,0,0], [0,0,0], 1, false] call EFUNC(sys_sounds,playSound);
     [MAIN_DISPLAY] call FUNC(render);
 };
